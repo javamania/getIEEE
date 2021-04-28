@@ -1,0 +1,28 @@
+select count(soa.title) from soa where soa.title = soa.title
+
+select soa.title, count(soa.title) from soa group by soa.title
+
+select soa.publication_year, count(1) as publication_cnt, soa.content_type as content_type from soa group by soa.publication_year, soa.content_type
+
+select soa.title, count(soa.title) as cnt from soa group by soa.title
+
+select soa.title from soa where soa.title = 'Fuzzy agents versus intelligent swarms'
+
+select soa.title from soa group by title having count(soa.title) > 1
+
+select count(soa1.title) from (select distinct soa.title from soa) as soa1
+
+
+    {
+        "title": "Fuzzy agents versus intelligent swarms",
+        "$1": 2
+    },
+    {
+        "title": "Specification, Validation and Run-time Monitoring of SOA Based System-of-Systems Temporal Behaviors",
+        "$1": 1
+    },
+    {
+        "title": "SoSE Modeling and Simulation Approaches to Evaluate Security and Performance Limitations of a Next Generation National Healthcare Information Network (NHIN-2)",
+        "$1": 1
+    }
+]
